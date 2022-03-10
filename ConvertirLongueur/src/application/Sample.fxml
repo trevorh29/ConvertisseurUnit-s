@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane fx:id="MonPane" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="Accueil" text="Accueil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="HomeLong" layoutX="139.0" layoutY="145.0" mnemonicParsing="false" onAction="#changer" prefHeight="27.0" prefWidth="73.0" text="Longueur" />
+                        <Button fx:id="HomeMasse" layoutX="282.0" layoutY="145.0" mnemonicParsing="false" onAction="#changer" prefHeight="27.0" prefWidth="73.0" text="Masse" />
+                        <Button fx:id="HomeTemps" layoutX="425.0" layoutY="145.0" mnemonicParsing="false" onAction="#changer" prefHeight="27.0" prefWidth="73.0" text="Temps" />
+                        <Label layoutX="175.0" layoutY="100.0" prefHeight="27.0" prefWidth="286.0" text="Acceuil des convertisseurs">
+                           <font>
+                              <Font name="SansSerif Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button layoutX="291.0" layoutY="278.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="LongeurTab" text="Longueur">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtlong1" layoutX="97.0" layoutY="137.0" onKeyReleased="#ConvertLong1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtlong2" layoutX="347.0" layoutY="137.0" onKeyReleased="#ConvertLong2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboLong1" layoutX="103.0" layoutY="177.0" onAction="#ConvertLong1" prefWidth="150.0" />
+                        <ComboBox fx:id="cboLong2" layoutX="352.0" layoutY="177.0" onAction="#ConvertLong1" prefWidth="150.0" />
+                        <Label layoutX="140.0" layoutY="69.0" prefHeight="35.0" prefWidth="338.0" text="Convertisseur de longueur" textFill="RED">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="MasseTab" text="Masse">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cboMasse1" layoutX="103.0" layoutY="177.0" onAction="#ConvertMasse1" prefWidth="150.0" />
+                        <ComboBox fx:id="cboMasse2" layoutX="352.0" layoutY="177.0" onAction="#ConvertMasse1" prefWidth="150.0" />
+                        <TextField fx:id="txtmasse1" layoutX="97.0" layoutY="137.0" onKeyReleased="#ConvertMasse1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtmasse2" layoutX="347.0" layoutY="137.0" onKeyReleased="#ConvertMasse2" onKeyTyped="#verifNum" />
+                        <Label layoutX="144.0" layoutY="72.0" text="Convertisseur de Masse" textFill="RED">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="TempsTab" text="Temps">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txttemps1" layoutX="97.0" layoutY="137.0" onKeyReleased="#ConvertTemps1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txttemps2" layoutX="347.0" layoutY="137.0" onKeyReleased="#ConvertTemps2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cbotemps1" layoutX="103.0" layoutY="177.0" onAction="#ConvertTemps1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbotemps2" layoutX="352.0" layoutY="177.0" onAction="#ConvertTemps1" prefWidth="150.0" />
+                        <Label layoutX="152.0" layoutY="74.0" text="Convertisseur de Temps" textFill="RED">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
