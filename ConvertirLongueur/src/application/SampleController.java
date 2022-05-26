@@ -126,7 +126,7 @@ public class SampleController implements Initializable{
 
     
     @FXML
-    private void verifNum(KeyEvent e)
+    private void verifNum(KeyEvent e)  
     {
     TextField txt=(TextField)e.getSource();
 
